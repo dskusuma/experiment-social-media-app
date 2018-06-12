@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Error from './components/Error';
 import Navigations from './components/Navigations';
 import Posts from './components/Posts';
+import PostForm from './components/PostForm';
 
 class App extends Component {
   render() {
@@ -14,14 +15,14 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Navigations />
+          <PostForm />
           <Switch>
             <Route path="/" component={Home} exact/>       
             <Route path="/about" component={About} />       
             <Route path="/contact" component={Contact} />
-            {/* <Route path="/posts" component={Posts} /> */}
+            <Route path="/posts" component={Posts} />
             <Route component={Error} />
           </Switch>
-          <p>{this.getData}</p>    
         </div>
       </BrowserRouter>
     );
